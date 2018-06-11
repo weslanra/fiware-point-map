@@ -1,0 +1,222 @@
+[
+  {
+    "id": "dcomp",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "João",
+        "num-professor": 50
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.922533, -37.103590]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Computação - DCOMP/UFS"
+    }
+  },
+  {
+    "id": "dmec",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Maria",
+        "num-professor": 30
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.922870, -37.103927]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Engenharia Mecânica - DMEC/UFS"
+    }
+  },
+  {
+    "id": "dnut",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "José",
+        "num-professor": 25
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.922823, -37.102803]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Nutrição - DNUT/UFS"
+    }
+  },
+  {
+    "id": "dfa",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Paulo",
+        "num-professor": 10
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.922486, -37.102873]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Farmácia - DFA/UFS"
+    }
+  },
+  {
+    "id": "dfs",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Henrique",
+        "num-professor": 32
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.922763, -37.102046]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Fisiologia - DFS/UFS"
+    }
+  },
+  {
+    "id": "dfi",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Mayara",
+        "num-professor": 46
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.922364, -37.100930]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Física - DFI/UFS"
+    }
+  },
+  {
+    "id": "decat",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Luzia",
+        "num-professor": 37
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.923095, -37.100928]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Estatística e Ciência Atuárias - DECAT/UFS"
+    }
+  },
+  {
+    "id": "dec",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Marcos",
+        "num-professor": 63
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.923455, -37.101522]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Engenharia Civil - DEC/UFS"
+    }
+  },
+  {
+    "id": "deam",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Ana",
+        "num-professor": 6
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.923580, -37.104113]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Engenharia Ambiental - DEAM/UFS"
+    }
+  },
+  {
+    "id": "del",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Genisson",
+        "num-professor": 25
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.923882, -37.103938]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Engenharia Elétrica - DEL/UFS"
+    }
+  }
+]

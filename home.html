@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://ssl.gstatic.com/atari/images/favicon_2.ico" type="image/x-icon"/>
+
+    <title>Hackathon UFS</title>
+
+    <!-- ========================= -->
+    <!-- ========== CSS ========== -->
+    <!-- ========================= -->
+    <link title="Bootstrap 4.1.0" rel="stylesheet" href="css/bootstrap-4.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- FILTRO -->
+    <div class="fixed-top col-md-12 color-white">
+        <div id="containerFilter" class="collapse col-md-4 offset-md-4 bg-color-primary">
+            Anim pariatur
+        </div>
+
+        <div class="col-md-4 offset-md-4 padding-0">
+            <a class="filter-dropdown" data-toggle="collapse" href="#containerFilter" role="button" aria-expanded="false" aria-controls="containerFilter">
+                <span class="float-right bg-color-primary dropdown-content rounded-bottom color-white"><i class="fas fa-sort-down"></i></span>
+            </a>
+        </div>
+    </div>
+    <!-- FILTRO -->
+    <!-- SIDEBAR LEFT -->
+    <!-- Button Open sidebar -->
+    <button id="buttomOpenLeft" class="btn bg-color-primary fixed-top color-white" type="button" data-toggle="collapse" data-target="#sidebarLeft" aria-expanded="false" aria-controls="sidebarLeft">
+        <i class="fas fa-bars fa-2x"></i>
+    </button>
+
+    <!-- Container Sidebar -->
+    <div class="collapse h-100 col-md-2 fixed-top float-left bg-color-primary padding-0 color-white" id="sidebarLeft">
+        <!-- Dismiss Link -->
+        <a class="dismiss bg-color-primary rounded color-white" data-toggle="collapse" href="#sidebarLeft" role="button" aria-expanded="false" aria-controls="containerFilter">
+            <span><i class="fas fa-long-arrow-alt-left"></i></span>
+        </a>
+
+        <!-- Brand Container Logo-->
+        <div class="contentBrand col-12 padding-0">
+            <img class="img-fluid" src="image/logo-hackathon-ufs.png">
+        </div>
+
+        <!-- Spacer Containers -->
+        <div class="col-md-12 bg-color-tertiary spacer-menu"></div>
+
+        <!-- List Menu -->
+        <div class="col-lg-12 padding-0">
+            <ul class="list-group list-group-flush bg-dark primary-menu" aria-expanded="true">
+                <li class="list-group-item bg-dark padding-0">
+                    <a href="#register-modal" class="link-menu active-link" data-toggle="modal">
+                    <!--<a href="#homeSubmenu" class="link-menu active-link"   data-toggle="collapse" aria-expanded="false">-->
+                        <span class="icon-menu"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="text-link">Registrar</span>
+
+                        <!-- icon submenu -->
+                        <!--<span class="content-pull"><i class="fas fa-angle-left"></i></span>-->
+                    </a>
+
+                    <!-- example submenu -->
+                    <!--<ul id="homeSubmenu" class="list-group list-group-flush collapse subMenu" aria-expanded="false">-->
+                        <!--<li class="list-group-item">-->
+                            <!--<a href="#" class="sub-link-menu">-->
+                                <!--<span class="icon-menu"><i class="fas fa-chart-pie"></i></span>-->
+                                <!--<span class="text-link">Submenu Teste</span>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                </li>
+                <li class="list-group-item bg-dark">
+                    <a href="#" class="link-menu">
+                        <span class="icon-menu"><i class="far fa-map"></i></span>
+                        <span class="text-link">Alterar</span>
+                    </a>
+                </li>
+                <li class="list-group-item bg-dark">
+                    <a href="#" class="link-menu">
+                        <span class="icon-menu"><i class="fas fa-minus-circle"></i></span>
+                        <span class="text-link">Deletar</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- SIDEBAR LEFT -->
+
+    <!-- REGISTER POINT MODAL -->
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="register-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title font-weight-bold" id="register-modal-long-title">Departamento</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="nome">Nome*: </label>
+                        <input type="text" class="form-control" id="nome" placeholder="Informe o nome do departamento">
+                    </div>
+
+                    <div class="col-md-4 padding-0">
+                        <div class="form-group">
+                            <label for="sigla">Sigla*: </label>
+                            <input type="text" class="form-control" id="sigla" placeholder="Informe a sigla">
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 padding-0" style="padding-right: 15px;">
+                                <div class="form-group">
+                                    <label for="responsavel">Responsável*: </label>
+                                    <input type="text" class="form-control" id="responsavel" placeholder="Informe o responsável">
+                                </div>
+                            </div>
+                            <div class="col-md-6 padding-0">
+                                <div class="form-group">
+                                    <label for="num_professor">Professor(es)*: </label>
+                                    <input type="number" class="form-control" id="num_professor">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 padding-0" style="padding-right: 15px;">
+                                <div class="form-group">
+                                    <label for="latitude">Latitude*: </label>
+                                    <input type="text" class="form-control" id="latitude" placeholder="Lat">
+                                </div>
+                            </div>
+                            <div class="col-md-6 padding-0">
+                                <div class="form-group">
+                                    <label for="longitude">Longitude*: </label>
+                                    <input type="text" class="form-control" id="longitude" placeholder="Long">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-hk-ufs submit-button">Salvar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- REGISTER POINT MODAL -->
+
+    <!-- MODAL SHOW QUERY -->
+    <div class="modal fade" id="show-query" tabindex="-1" role="dialog" aria-labelledby="show-query-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title font-weight-bold" id="show-query-long-title"></span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL SHOW QUERY -->
+
+    <div id="map"></div>
+
+
+    <!-- ========================= -->
+    <!-- ========== JS  ========== -->
+    <!-- ========================= -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script title="Popper 1.14.0" type="text/javascript"></script>
+    <script title="Bootstrap 4.1.0" type="text/javascript" src="css/bootstrap-4.1.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUPXzqMDQH0cp6orK1fnu11Nt-2rotyKE&callback=initMap"
+            async defer></script>
+    <script title="Custom Map" type="text/javascript" src="js/customMap.js"></script>
+    <script title="API FIWARE" type="text/javascript" src="js/api-fiware.js"></script>
+    <script title="Main" type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+        //Submit Point
+        $('#register-modal .submit-button').on('click', function () {
+            point = {
+                "id": $('#sigla').val(),
+                "type": "hk-ufs-point",
+                "membro": {
+                    "type": "membros",
+                    "value": {
+                        "responsavel": $('#responsavel').val(),
+                        "num-professor": parseInt($('#num_professor').val())
+                    }
+                },
+                "location": {
+                    "type": "geo:json",
+                    "value": {
+                        "type": "Point",
+                        "coordinates": [parseFloat($('#latitude').val()), parseFloat($('#longitude').val())]
+                    }
+                },
+                "name": {
+                    "type": "Text",
+                    "value": $('#nome').val()
+                }
+            };
+
+            console.log(point);
+            post(point);
+        });
+    </script>
+</body>
+</html>

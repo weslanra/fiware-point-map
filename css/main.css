@@ -1,0 +1,175 @@
+body{
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 500;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    margin: 0;
+}
+
+.color-white{
+    color: #fff;
+}
+
+.bg-color-primary{
+    background: #272c30;
+}
+
+.bg-color-secundary{
+    background: #373d42;
+}
+
+.bg-color-tertiary{
+    background: #344c9d;
+}
+
+.bg-dark-back{
+    background: #1a2226;
+}
+
+.padding-0{
+    padding: 0;
+}
+
+.margin-0{
+    margin: 0;
+}
+
+#map{
+    height: 100vh;
+    width: 100vw;
+}
+
+#containerFilter{
+    padding: 10px 15px;
+    border-bottom-left-radius: 5px;
+}
+
+.dropdown-content{
+    padding: 2px 5px;
+}
+
+#buttomOpenLeft{
+    left: 8px;
+    top: 85px;
+}
+
+#sidebarLeft a{
+    transition: all 0.3s ease;
+}
+
+.dismiss{
+    padding: 4.3px 8px;
+    margin: 5px;
+    z-index: 2;
+    position: absolute; right: 0;
+}
+
+.contentBrand{
+    background-color: #000;
+    padding-top: 30px;
+}
+
+.spacer-menu{
+    height: 20px;
+}
+
+.btn-hk-ufs{
+    background: #373d42;
+    border: #373d42;
+}
+
+.btn-hk-ufs:hover, .btn-hk-ufs:active, .btn-hk-ufs:focus{
+    background: #272c30;
+    border: #272c30;
+}
+
+/*
+    LIST MENU
+*/
+
+.active-link:hover, .active-link:active, .active-link:focus{
+    color: #fff;
+    text-decoration: none;
+    border-left: #71ba4a solid 5px;
+    border-top: 0;
+    border-bottom: 0;
+    background: #1e282c;
+    padding-left: 15px !important;
+}
+
+.link-menu:hover, .link-menu:active, .link-menu:focus{
+    color: #fff;
+    text-decoration: none;
+    border-left: #71ba4a solid 5px;
+    border-top: 0;
+    border-bottom: 0;
+    background: #1e282c;
+    padding-left: 15px !important;
+}
+
+.sub-link-menu:hover, .sub-link-menu:active, .sub-link-menu:focus{
+    color: #fff;
+    text-decoration: none;
+}
+
+.sub-link-menu{
+    color: #fff;
+    position: relative;
+    display: block;
+    padding: 12px 20px 12px 40px;
+    text-decoration: none;
+}
+
+.link-menu{
+    color: #fff;
+    position: relative;
+    display: block;
+    padding: 12px 20px 12px 20px;
+    border-left: solid 5px transparent;
+    text-decoration: none;
+}
+
+.primary-menu li{
+    padding: 0;
+}
+
+.link-menu:hover{
+    background: #1e282c;
+}
+
+.subMenu li{
+    background: #2c3b41;
+    text-decoration: none;
+}
+
+.icon-menu{
+    margin-right: 15px;
+}
+
+.primary-menu[aria-expanded=false] > li a{
+    text-align: center;
+}
+
+.primary-menu[aria-expanded=false] > li a .icon-menu{
+    font-size: 1.5em;
+    margin-right: 0;
+}
+
+.primary-menu[aria-expanded=false] > li a .text-link, .primary-menu[aria-expanded=false] > li a .content-pull{
+    display: none;
+}
+
+.content-pull{
+    float: right;
+}
+
+.infowindow-marker, .infowindow-marker *{
+    color: #000;
+}
+
+/*
+    LIST MENU
+*/
