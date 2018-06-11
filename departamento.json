@@ -218,5 +218,27 @@
       "type": "Text",
       "value": "Departamento de Engenharia Elétrica - DEL/UFS"
     }
+  },
+  {
+    "id": "dlev",
+    "type": "hk-ufs-point",
+    "membro": {
+      "type": "membros",
+      "value": {
+        "responsavel": "Samuel",
+        "num-professor": 13
+      }
+    },
+    "location": {
+      "type": "geo:json",
+      "value": {
+        "type": "Point",
+        "coordinates": [-10.924911, -37.102503]
+      }
+    },
+    "name": {
+      "type": "Text",
+      "value": "Departamento de Letras Vernáculas"
+    }
   }
 ]

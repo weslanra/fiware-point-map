@@ -1,4 +1,4 @@
-var baseURL = "http://200.17.141.87:1026/";
+var baseURL = "http://localhost:1026/";
 
 function get(ngsiv2 = 'v2/entities') {
     var ret = $.get(baseURL + ngsiv2, function (date) {//Success
@@ -15,14 +15,18 @@ function get(ngsiv2 = 'v2/entities') {
 
 function post(dataSend) {
     var ret = $.ajax({
-        url: baseURL + 'v2/entities/',
-        type: "POST",
-        data: dataSend,
-        contentType: "application/json",
-        dataType: "json",
-        success: function (data) {
-            return data;
-        }
+      url: baseURL + 'v2/entities/',
+      type: 'POST',
+      dataType: 'json',
+      contentType: 'application/json',
+      processData: false,
+      data: JSON.stringify(dataSend),
+      success: function (data) {
+        return data;
+      },
+      error: function(){
+        return null;
+      }
     });
 
     showQuery(baseURL + 'v2/entities/', ret);

@@ -193,31 +193,59 @@
     <script type="text/javascript">
         //Submit Point
         $('#register-modal .submit-button').on('click', function () {
-            point = {
-                "id": $('#sigla').val(),
-                "type": "hk-ufs-point",
-                "membro": {
-                    "type": "membros",
-                    "value": {
-                        "responsavel": $('#responsavel').val(),
-                        "num-professor": parseInt($('#num_professor').val())
-                    }
-                },
-                "location": {
-                    "type": "geo:json",
-                    "value": {
-                        "type": "Point",
-                        "coordinates": [parseFloat($('#latitude').val()), parseFloat($('#longitude').val())]
-                    }
-                },
-                "name": {
-                    "type": "Text",
-                    "value": $('#nome').val()
-                }
-            };
+          sigla = $('#sigla');
+          responsavel = $('#responsavel');
+          num_professor = $('#num_professor');
+          latitude = $('#latitude');
+          longitude = $('#longitude');
+          nome = $('#nome');
 
-            console.log(point);
-            post(point);
+          point = {
+            id: sigla.val(),
+            type: "hk-ufs-point",
+            membro: {
+              type: "membros",
+              value: {
+                responsavel: responsavel.val(),
+                num_professor: parseInt(num_professor.val())
+              }
+            },
+            location: {
+              type: "geo:json",
+              value: {
+                type: "Point",
+                coordinates: [parseFloat(latitude.val()), parseFloat(longitude.val())]
+              }
+            },
+            name: {
+              type: "Text",
+              value: nome.val()
+            }
+          };
+
+          console.log(point);
+          ret = post(point);
+
+          ret.always(function (date, status, xhr) {
+            if(status == "error"){
+              alert('Falha ao registrar ponto!');
+            }else{
+              alert('Ponto registrado com sucesso!');
+
+              sigla.val('');
+              responsavel.val('');
+              num_professor.val(0);
+              latitude.val(0);
+              longitude.val(0);
+              nome.val('');
+
+              $('#register-modal').modal({
+                show: false
+              });
+
+              initMap();
+            }
+          })
         });
     </script>
 </body>
