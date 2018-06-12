@@ -226,7 +226,7 @@
       "type": "membros",
       "value": {
         "responsavel": "Samuel",
-        "num-professor": 13
+        "num_professor": 13
       }
     },
     "location": {
@@ -238,7 +238,7 @@
     },
     "name": {
       "type": "Text",
-      "value": "Departamento de Letras Vernáculas"
+      "value": "Departamento de Letras Vernáculas - DLEV/UFS"
     }
   }
 ]

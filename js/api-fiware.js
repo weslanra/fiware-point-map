@@ -8,7 +8,7 @@ function get(ngsiv2 = 'v2/entities') {
             return null;
         });
 
-    showQuery(baseURL + ngsiv2, ret);
+    // showQuery(baseURL + ngsiv2, ret);
 
     return ret;
 }
@@ -29,7 +29,45 @@ function post(dataSend) {
       }
     });
 
-    showQuery(baseURL + 'v2/entities/', ret);
+    // showQuery(baseURL + 'v2/entities/', ret);
+
+    return ret;
+}
+
+function deleteFiware(ngsiv2) {
+  var ret = $.ajax({
+    url: baseURL + ngsiv2,
+    type: 'DELETE',
+    success: function (data) {
+      return data;
+    },
+    error: function(){
+      return null;
+    }
+  });
+
+  // showQuery(baseURL + ngsiv2, ret);
+
+  return ret;
+}
+
+function patch (ngsiv2, dataSend) {
+    var ret = $.ajax({
+        url: baseURL + ngsiv2,
+        type: 'PATCH',
+        dataType: 'json',
+        contentType: 'application/json',
+        processData: false,
+        data: JSON.stringify(dataSend),
+        success: function (data) {
+            return data;
+        },
+        error: function(){
+            return null;
+        }
+    });
+
+    // showQuery(baseURL + ngsiv2, ret);
 
     return ret;
 }

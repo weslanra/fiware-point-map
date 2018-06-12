@@ -17,27 +17,34 @@
 </head>
 <body>
 
-    <!-- FILTRO -->
-    <div class="fixed-top col-md-12 color-white">
-        <div id="containerFilter" class="collapse col-md-4 offset-md-4 bg-color-primary">
-            Anim pariatur
-        </div>
+    <!-- ==================== -->
+    <!-- ====== FILTRO ====== -->
+    <!-- ==================== -->
+    <!--<div class="fixed-top col-md-12 color-white">-->
+        <!--<div id="containerFilter" class="collapse col-md-4 offset-md-4 bg-color-primary">-->
+            <!--Anim pariatur-->
+        <!--</div>-->
 
-        <div class="col-md-4 offset-md-4 padding-0">
-            <a class="filter-dropdown" data-toggle="collapse" href="#containerFilter" role="button" aria-expanded="false" aria-controls="containerFilter">
-                <span class="float-right bg-color-primary dropdown-content rounded-bottom color-white"><i class="fas fa-sort-down"></i></span>
-            </a>
-        </div>
-    </div>
-    <!-- FILTRO -->
-    <!-- SIDEBAR LEFT -->
+        <!--<div class="col-md-4 offset-md-4 padding-0">-->
+            <!--<a class="filter-dropdown" data-toggle="collapse" href="#containerFilter" role="button" aria-expanded="false" aria-controls="containerFilter">-->
+                <!--<span class="float-right bg-color-primary dropdown-content rounded-bottom color-white"><i class="fas fa-sort-down"></i></span>-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!-- ==================== -->
+    <!-- ====== /FILTRO ===== -->
+    <!-- ==================== -->
+
+    <!-- ==================== -->
+    <!-- === SIDEBAR LEFT === -->
+    <!-- ==================== -->
     <!-- Button Open sidebar -->
     <button id="buttomOpenLeft" class="btn bg-color-primary fixed-top color-white" type="button" data-toggle="collapse" data-target="#sidebarLeft" aria-expanded="false" aria-controls="sidebarLeft">
         <i class="fas fa-bars fa-2x"></i>
     </button>
 
     <!-- Container Sidebar -->
-    <div class="collapse h-100 col-md-2 fixed-top float-left bg-color-primary padding-0 color-white" id="sidebarLeft">
+    <div id="sidebarLeft" class="collapse h-100 col-md-2 fixed-top float-left bg-color-primary padding-0 color-white">
         <!-- Dismiss Link -->
         <a class="dismiss bg-color-primary rounded color-white" data-toggle="collapse" href="#sidebarLeft" role="button" aria-expanded="false" aria-controls="containerFilter">
             <span><i class="fas fa-long-arrow-alt-left"></i></span>
@@ -75,13 +82,13 @@
                     <!--</ul>-->
                 </li>
                 <li class="list-group-item bg-dark">
-                    <a href="#" class="link-menu">
+                  <a href="#update-modal" onclick="getPointUpdate();" class="link-menu active-link" data-toggle="modal">
                         <span class="icon-menu"><i class="far fa-map"></i></span>
                         <span class="text-link">Alterar</span>
                     </a>
                 </li>
                 <li class="list-group-item bg-dark">
-                    <a href="#" class="link-menu">
+                    <a href="#delete-modal" onclick="getPointDelete();" class="link-menu active-link" data-toggle="modal">
                         <span class="icon-menu"><i class="fas fa-minus-circle"></i></span>
                         <span class="text-link">Deletar</span>
                     </a>
@@ -89,9 +96,13 @@
             </ul>
         </div>
     </div>
-    <!-- SIDEBAR LEFT -->
+    <!-- ==================== -->
+    <!-- == /SIDEBAR LEFT === -->
+    <!-- ==================== -->
 
+    <!-- ==================== -->
     <!-- REGISTER POINT MODAL -->
+    <!-- ==================== -->
     <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="register-modal-title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -147,15 +158,110 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-hk-ufs submit-button">Salvar</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-secondary btn-hk-ufs submit-button">Registrar</button>
+                    <button type="button" class="btn btn-secondary btn-hk-ufs" data-dismiss="modal">Cancelar</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- ==================== -->
     <!-- REGISTER POINT MODAL -->
+    <!-- ==================== -->
 
-    <!-- MODAL SHOW QUERY -->
+    <!-- ==================== -->
+    <!-- = UPDATE POINT MODAL -->
+    <!-- ==================== -->
+    <div class="modal fade" id="update-modal" tabindex="-1" role="dialog" aria-labelledby="update-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title font-weight-bold" id="update-modal-long-title">Departamento</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select id="selectUpdate" class="form-control"></select>
+
+                    <div class="collapse" id="contentUpdate">
+                        <div class="card card-body">
+                            <div class="form-group">
+                                <label for="nome">Nome*: </label>
+                                <input type="text" class="form-control" id="up-nome" placeholder="Informe o nome do departamento">
+                            </div>
+
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6 padding-0" style="padding-right: 15px;">
+                                        <div class="form-group">
+                                            <label for="responsavel">Responsável*: </label>
+                                            <input type="text" class="form-control" id="up-responsavel" placeholder="Informe o responsável">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 padding-0">
+                                        <div class="form-group">
+                                            <label for="num_professor">Professor(es)*: </label>
+                                            <input type="number" class="form-control" id="up-num_professor">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 padding-0" style="padding-right: 15px;">
+                                        <div class="form-group">
+                                            <label for="latitude">Latitude*: </label>
+                                            <input type="text" class="form-control" id="up-latitude" placeholder="Lat">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 padding-0">
+                                        <div class="form-group">
+                                            <label for="longitude">Longitude*: </label>
+                                            <input type="text" class="form-control" id="up-longitude" placeholder="Long">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-hk-ufs submit-button">Salvar</button>
+                    <button type="button" class="btn btn-secondary btn-hk-ufs" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==================== -->
+    <!-- = UPDATE POINT MODAL -->
+    <!-- ==================== -->
+
+    <!-- ==================== -->
+    <!-- = DELETE POINT MODAL -->
+    <!-- ==================== -->
+    <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="delete-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title font-weight-bold" id="delete-modal-long-title">Deletar</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select id="selectDelete" class="form-control"></select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-hk-ufs submit-button">Deletar</button>
+                    <button type="button" class="btn btn-secondary btn-hk-ufs" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- DELETE POINT MODAL -->
+
+    <!-- ==================== -->
+    <!-- = MODAL SHOW QUERY = -->
+    <!-- ==================== -->
     <div class="modal fade" id="show-query" tabindex="-1" role="dialog" aria-labelledby="show-query-title" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -174,7 +280,9 @@
             </div>
         </div>
     </div>
-    <!-- MODAL SHOW QUERY -->
+    <!-- ==================== -->
+    <!-- = MODAL SHOW QUERY = -->
+    <!-- ==================== -->
 
     <div id="map"></div>
 
@@ -191,61 +299,149 @@
     <script title="API FIWARE" type="text/javascript" src="js/api-fiware.js"></script>
     <script title="Main" type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript">
-        //Submit Point
+        //Registrar Ponto
         $('#register-modal .submit-button').on('click', function () {
-          sigla = $('#sigla');
-          responsavel = $('#responsavel');
-          num_professor = $('#num_professor');
-          latitude = $('#latitude');
-          longitude = $('#longitude');
-          nome = $('#nome');
+            sigla = $('#sigla');
+            responsavel = $('#responsavel');
+            num_professor = $('#num_professor');
+            latitude = $('#latitude');
+            longitude = $('#longitude');
+            nome = $('#nome');
 
-          point = {
-            id: sigla.val(),
-            type: "hk-ufs-point",
-            membro: {
-              type: "membros",
-              value: {
-                responsavel: responsavel.val(),
-                num_professor: parseInt(num_professor.val())
+            point = {
+                id: sigla.val(),
+                type: "hk-ufs-point",
+                membro: {
+                    type: "membros",
+                    value: {
+                        responsavel: responsavel.val(),
+                        num_professor: parseInt(num_professor.val())
+                    }
+                },
+                location: {
+                    type: "geo:json",
+                    value: {
+                        type: "Point",
+                        coordinates: [parseFloat(latitude.val()), parseFloat(longitude.val())]
+                    }
+                },
+                name: {
+                    type: "Text",
+                    value: nome.val()
+                }
+            };
+
+            console.log(point);
+            ret = post(point);
+
+            ret.always(function (date, status, xhr) {
+                if(status == "error"){
+                    alert('Falha ao registrar ponto!');
+                }else{
+                    alert('Ponto registrado com sucesso!');
+
+                    sigla.val('');
+                    responsavel.val('');
+                    num_professor.val(0);
+                    latitude.val(0);
+                    longitude.val(0);
+                    nome.val('');
+
+                    $('#register-modal').modal('toggle');
+
+                    initMap();
+                }
+            })
+        });
+
+        //Deletar Ponto
+        $('#delete-modal .submit-button').on('click', function () {
+            selectDelete = $('#selectDelete');
+
+            ret = deleteFiware('v2/entities/' + selectDelete.val());
+
+            ret.always(function (date, status, xhr) {
+              if(status == "error"){
+                alert('Falha ao tentar apagar o ponto!');
+              }else{
+                alert('Ponto apagado');
+
+                $('#delete-modal').modal('toggle');
+
+                initMap();
               }
-            },
-            location: {
-              type: "geo:json",
-              value: {
-                type: "Point",
-                coordinates: [parseFloat(latitude.val()), parseFloat(longitude.val())]
-              }
-            },
-            name: {
-              type: "Text",
-              value: nome.val()
-            }
-          };
+            });
+        });
 
-          console.log(point);
-          ret = post(point);
+        //Alterar Ponto
+        $('#selectUpdate').on('change', function () {
+            selectUpdate = $('#selectUpdate');
 
-          ret.always(function (date, status, xhr) {
-            if(status == "error"){
-              alert('Falha ao registrar ponto!');
+            ret = get('v2/entities/' + selectUpdate.val());
+
+            ret.always(function (data, status, xhs) {
+                if(status == "error"){
+                    alert('Falha ao consultar dados do ponto.');
+                }else{
+                    $(data).each(function () {
+                        $('#up-nome').val(this.name.value);
+                        $('#up-responsavel').val(this.membro.value.responsavel);
+                        $('#up-num_professor').val(this.membro.value.num_professor);
+                        $('#up-latitude').val(this.location.value.coordinates[0]);
+                        $('#up-longitude').val(this.location.value.coordinates[1]);
+                    });
+                }
+            });
+
+            $('#contentUpdate').collapse();
+        });
+
+        $('#update-modal .submit-button').on('click', function () {
+
+
+            if($('#selectUpdate').val() == ''){
+                alert('Selecione um departamento');
             }else{
-              alert('Ponto registrado com sucesso!');
+                responsavel = $('#up-responsavel');
+                num_professor = $('#up-num_professor');
+                latitude = $('#up-latitude');
+                longitude = $('#up-longitude');
+                nome = $('#up-nome');
 
-              sigla.val('');
-              responsavel.val('');
-              num_professor.val(0);
-              latitude.val(0);
-              longitude.val(0);
-              nome.val('');
+                point = {
+                    membro: {
+                        type: "membros",
+                        value: {
+                            responsavel: responsavel.val(),
+                            num_professor: parseInt(num_professor.val())
+                        }
+                    },
+                    location: {
+                        type: "geo:json",
+                        value: {
+                            type: "Point",
+                            coordinates: [parseFloat(latitude.val()), parseFloat(longitude.val())]
+                        }
+                    },
+                    name: {
+                        type: "Text",
+                        value: nome.val()
+                    }
+                };
 
-              $('#register-modal').modal({
-                show: false
-              });
+                ret = patch('v2/entities/' + $('#selectUpdate').val() + '/attrs/', point);
 
-              initMap();
+                ret.always(function (data, status, xhs) {
+                    if(status == "error"){
+                        alert('Falha ao alterar ponto!');
+                    }else{
+                        alert('Ponto alterado com sucesso!');
+
+                        $('#update-modal').modal('toggle');
+                        initMap();
+                    }
+                });
             }
-          })
         });
     </script>
 </body>

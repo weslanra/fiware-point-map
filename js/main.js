@@ -30,3 +30,33 @@ $(document).ready(function () {
 
 $( window ).resize(function() {
 });
+
+function getPointUpdate() {
+  ret = get('v2/entities?type=hk-ufs-point&attrs=id');
+
+  ret.always(function (data) {
+    str = '<option selected disabled>Selecione um departamento</option>';
+
+    $(data).each(function () {
+      str = str
+        + "<option value='" + this.id + "'>" + this.id + "</option>";
+    });
+
+    $('#selectUpdate').html(str);
+  })
+}
+
+function getPointDelete() {
+  ret = get('v2/entities?type=hk-ufs-point&attrs=id');
+  
+  ret.always(function (data) {
+    str = '';
+
+    $(data).each(function () {
+      str = str
+        + "<option value='" + this.id + "'>" + this.id + "</option>";
+    });
+
+    $('#selectDelete').html(str);
+  });
+}

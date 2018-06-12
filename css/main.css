@@ -67,6 +67,11 @@ body{
     position: absolute; right: 0;
 }
 
+.dismiss:hover, .dismiss:focus, .dismiss:active{
+    color: #fff;
+    background: #373d42;
+}
+
 .contentBrand{
     background-color: #000;
     padding-top: 30px;
@@ -84,6 +89,10 @@ body{
 .btn-hk-ufs:hover, .btn-hk-ufs:active, .btn-hk-ufs:focus{
     background: #272c30;
     border: #272c30;
+}
+
+#contentUpdate{
+    margin-top: 15px;
 }
 
 /*
