@@ -4,9 +4,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="https://ssl.gstatic.com/atari/images/favicon_2.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link rel="text/javascript" href="./js/script.js">
+    <!-- <link rel="shortcut icon" href="https://ssl.gstatic.com/atari/images/favicon_2.ico" type="image/x-icon"/> -->
 
-    <title>Hackathon UFS</title>
+    <title>Hackathon Aveiro Smart City 2022</title>
 
     <!-- ========================= -->
     <!-- ========== CSS ========== -->
@@ -52,7 +54,7 @@
 
         <!-- Brand Container Logo-->
         <div class="contentBrand col-12 padding-0">
-            <img class="img-fluid" src="image/logo-hackathon-ufs.png">
+            <img class="img-fluid" src="image/Image-Hackathon.png">
         </div>
 
         <!-- Spacer Containers -->
@@ -63,34 +65,70 @@
             <ul class="list-group list-group-flush bg-dark primary-menu" aria-expanded="true">
                 <li class="list-group-item bg-dark padding-0">
                     <a href="#register-modal" class="link-menu active-link" data-toggle="modal">
-                    <!--<a href="#homeSubmenu" class="link-menu active-link"   data-toggle="collapse" aria-expanded="false">-->
+                    <a href="#homeSubmenu" class="link-menu active-link"   data-toggle="collapse" aria-expanded="false">
                         <span class="icon-menu"><i class="fas fa-map-marker-alt"></i></span>
-                        <span class="text-link">Registrar</span>
+                        <span class="text-link">Sítios interessantes</span>
 
                         <!-- icon submenu -->
-                        <!--<span class="content-pull"><i class="fas fa-angle-left"></i></span>-->
+                        <span class="content-pull"><i class="fas fa-angle-right"></i></span>
                     </a>
 
                     <!-- example submenu -->
-                    <!--<ul id="homeSubmenu" class="list-group list-group-flush collapse subMenu" aria-expanded="false">-->
-                        <!--<li class="list-group-item">-->
-                            <!--<a href="#" class="sub-link-menu">-->
-                                <!--<span class="icon-menu"><i class="fas fa-chart-pie"></i></span>-->
-                                <!--<span class="text-link">Submenu Teste</span>-->
-                            <!--</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
+                    <ul id="homeSubmenu" class="list-group list-group-flush collapse subMenu" aria-expanded="false">
+                        <li class="list-group-item">
+                            <a href="#" class="sub-link-menu">
+                                <span class="icon-menu"><i class="fas fa-chart-pie"></i></span>
+                                <span class="text-link">Museo de Aveiro</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="sub-link-menu">
+                                <span class="icon-menu"><i class="fas fa-chart-pie"></i></span>
+                                <span class="text-link">Salinas de Aveiro</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="sub-link-menu">
+                                <span class="icon-menu"><i class="fas fa-chart-pie"></i></span>
+                                <span class="text-link">Museu de Arte Nova</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="sub-link-menu">
+                                <span class="icon-menu"><i class="fas fa-chart-pie"></i></span>
+                                <span class="text-link">Garden Alboi</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="sub-link-menu">
+                                <span class="icon-menu"><i class="fas fa-chart-pie"></i></span>
+                                <span class="text-link">Ponte dos Carcavelos</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="sub-link-menu">
+                                <span class="icon-menu"><i class="fas fa-chart-pie"></i></span>
+                                <span class="text-link">Universidad de Aveiro</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="list-group-item bg-dark">
-                  <a href="#update-modal" onclick="getPointUpdate();" class="link-menu active-link" data-toggle="modal">
+                    <a href="#update-modal" onclick="getPointUpdate();" class="link-menu active-link" data-toggle="modal">
                         <span class="icon-menu"><i class="far fa-map"></i></span>
-                        <span class="text-link">Alterar</span>
+                        <span class="text-link">Transporte público</span>
+                        <span class="content-pull"><i class="fas fa-angle-right"></i></span>
                     </a>
                 </li>
                 <li class="list-group-item bg-dark">
                     <a href="#delete-modal" onclick="getPointDelete();" class="link-menu active-link" data-toggle="modal">
                         <span class="icon-menu"><i class="fas fa-minus-circle"></i></span>
-                        <span class="text-link">Deletar</span>
+                        <span class="text-link">Colaborar/Editar</span>
+                    </a>
+                </li>
+                <li class="list-group-item bg-dark">
+                    <a href="#delete-modal">
+                        <img src="./image/LOGO eye/Loc Eye-04.png" alt="Logo Loc Eye - Aveiro" width="100%">
                     </a>
                 </li>
             </ul>
@@ -285,19 +323,20 @@
     <!-- ==================== -->
 
     <div id="map"></div>
-
-
+    
     <!-- ========================= -->
     <!-- ========== JS  ========== -->
     <!-- ========================= -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="./js/script.js" ></script>
+
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script title="Popper 1.14.0" type="text/javascript"></script>
     <script title="Bootstrap 4.1.0" type="text/javascript" src="css/bootstrap-4.1.0-dist/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUPXzqMDQH0cp6orK1fnu11Nt-2rotyKE&callback=initMap"
-            async defer></script>
-    <script title="Custom Map" type="text/javascript" src="js/customMap.js"></script>
+    <!-- <script title="Custom Map" type="text/javascript" src="js/customMap.js"></script> -->
     <script title="API FIWARE" type="text/javascript" src="js/api-fiware.js"></script>
-    <script title="Main" type="text/javascript" src="js/main.js"></script>
+    <!-- <script title="Main" type="text/javascript" src="js/main.js"></script> -->
     <script type="text/javascript">
         //Registrar Ponto
         $('#register-modal .submit-button').on('click', function () {
